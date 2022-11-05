@@ -1,0 +1,49 @@
+@import "../../assets/Lib/scss/variables/font.scss";
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 60px;
+  padding-right: 60px;
+
+  &__right {
+    display: flex;
+    align-items: center;
+  }
+
+  &__profile {
+    padding: 20px 60px;
+    width: 292px;
+    display: flex;
+    align-items: center;
+    background: #3d639d;
+    border-radius: 0px 0px 0px 30px;
+
+    &-text {
+      margin: 0;
+      margin-right: 12px;
+      font-family: "Gilroy";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 19px;
+      color: #ffffff;
+    }
+  }
+
+  &__notification {
+    transform: translateY(15%);
+    margin-right: 40px;
+  }
+
+  &__logo {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    text-decoration: none;
+    color: #000000;
+  }
+}

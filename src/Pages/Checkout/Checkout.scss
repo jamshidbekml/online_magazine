@@ -1,0 +1,155 @@
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #3d639d;
+  border-radius: 6px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #888;
+}
+
+.checkout {
+  padding: 20px 20px;
+  overflow-y: scroll;
+  height: 92%;
+
+  &__top {
+    display: flex;
+    align-items: center;
+    padding-bottom: 20px;
+
+    &-text {
+      display: flex;
+      align-items: center;
+      margin: 0;
+      font-family: "Gilroy";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 14px;
+      color: #bbc2d0;
+      flex: none;
+      order: 0;
+      flex-grow: 0;
+    }
+
+    &-text:nth-child(2) {
+      font-family: "Gilroy";
+      font-style: normal;
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 14px;
+      color: #00c48c !important;
+      flex: none;
+      order: 2;
+      flex-grow: 0;
+    }
+
+    &-title {
+      margin: 0;
+      font-family: "Gilroy";
+      font-style: normal;
+      font-weight: 600;
+      font-size: 22px;
+      line-height: 26px;
+      color: #3d639d;
+    }
+  }
+
+  &__input {
+    width: 100%;
+    padding: 16px 20px;
+    background: #ffffff;
+    border-radius: 26px;
+    outline: 3px solid transparent;
+    border: none;
+    font-size: 16px;
+
+    &-wrapper {
+      position: relative;
+      margin-bottom: 30px;
+    }
+
+    &-btn {
+      position: absolute;
+      height: 100%;
+      width: 10%;
+      right: 0;
+      z-index: 1000;
+      border-radius: 0 26px 26px 0;
+      border: none;
+      background: #00c48c;
+      cursor: pointer;
+    }
+
+    &:focus {
+      outline: 3px solid #00c48c;
+    }
+
+    &::placeholder {
+      font-family: "Gilroy";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 19px;
+      letter-spacing: -0.3px;
+      color: #bbc2d0;
+    }
+  }
+
+  &__products {
+    display: flex;
+    margin-bottom: 30px;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    &-title {
+      margin: 0;
+      margin-bottom: 20px;
+      display: inline-block;
+      padding-right: 5px;
+      font-family: "Gilroy";
+      font-style: normal;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 19px;
+      letter-spacing: -0.3px;
+      color: #262728;
+    }
+
+    &-count {
+      font-family: "Gilroy";
+      font-style: normal;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 19px;
+      letter-spacing: -0.3px;
+      color: #262728;
+    }
+  }
+
+  &__pagination {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 30px;
+
+    &-button {
+      background: none;
+      border: none;
+      cursor: pointer;
+    }
+  }
+}
