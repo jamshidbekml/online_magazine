@@ -9,7 +9,6 @@ const Data = ({ children }) => {
   const search = useContext(GetValue)[0];
   const [loading, setLoading] = useState(true);
   const [products, setProducts] = useState([]);
-  var response = [];
   useEffect(() => {
     async function fetchData() {
       if (search.length >= 3) {
@@ -17,19 +16,25 @@ const Data = ({ children }) => {
         let { data } = await axios.get(
           `https://api.radius.uz/api/v2/search?search=${search}&type=products`
         );
-        response = data.data.filter((e) => e.slug != null && e.name != null);
+        return (
+          setProducts(
+            data.data.filter((e) => e.slug != null && e.name != null)
+          ),
+          setLoading(false)
+        );
       } else {
         setLoading(true);
         let { data } = await axios.get(
           "https://api.radius.uz/api/v2/products?page=1&category_id=36&order_by=views&order_direction=desc&price_from=0&price_to=22999000"
         );
 
-        response = data.data.filter((e) => e.slug != null && e.name != null);
+        return (
+          setProducts(
+            data.data.filter((e) => e.slug != null && e.name != null)
+          ),
+          setLoading(false)
+        );
       }
-      setProducts(response);
-      setLoading(false);
-      // setTimeout(() => {
-      // }, 3000);
     }
     fetchData();
   }, [search]);
