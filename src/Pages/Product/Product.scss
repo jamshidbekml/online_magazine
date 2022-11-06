@@ -1,7 +1,8 @@
 .product {
-  padding: 20px 20px;
+  padding: 20px;
   overflow-y: scroll;
   height: 92%;
+  box-sizing: border-box;
 
   &__link {
     text-decoration: none;
@@ -62,16 +63,28 @@
   }
 
   &__content {
-    position: relative;
     padding: 30px;
     background: #ffffff;
     border-radius: 16px;
+    position: relative;
+
+    &-icon {
+      position: absolute;
+      top: 0;
+      transform: translateY(-50%);
+      right: 16px;
+      padding: 18px 18px 9px 18px;
+      background: #ff647c;
+      border-radius: 50%;
+    }
 
     &-wrapper {
       display: flex;
+      margin-bottom: 30px;
     }
 
     &-left {
+      position: relative;
       width: 480px;
       height: 380px;
       border-radius: 16px;
@@ -94,6 +107,21 @@
         padding-bottom: 20px;
         border-bottom: 2px solid #f7f7f7;
         margin-bottom: 20px;
+      }
+
+      &-character {
+        padding-bottom: 20px;
+
+        &-text {
+          margin: 0;
+          padding: 0;
+          font-family: "Gilroy";
+          font-style: normal;
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 19px;
+          color: #262728;
+        }
       }
     }
 
@@ -210,7 +238,7 @@
       margin: 0;
       padding: 0;
       margin-right: 14px;
-      padding: 2px 6px 0 6px;
+      padding: 4px 6px 0 6px;
       background: #ff647c;
       border-radius: 2px;
       font-family: "Gilroy";
@@ -257,6 +285,164 @@
       line-height: 19px;
       letter-spacing: -0.3px;
       color: #262728;
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &-link {
+      font-family: "Gilroy";
+      font-style: normal;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 19px;
+      letter-spacing: 0.01em;
+      color: #00c48c;
+      text-decoration: none;
+    }
+  }
+
+  &__order {
+    &-title {
+      margin: 0;
+      font-family: "Gilroy";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 19px;
+      letter-spacing: -0.3px;
+      color: #00c48c;
+    }
+
+    &-list {
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+    }
+
+    &-item {
+      margin: 0;
+      padding: 0;
+      padding-bottom: 20px;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+
+      &:nth-child(1) {
+        border-bottom: 1px solid #bbc2d0;
+      }
+
+      &:nth-child(1) .product__order-icon {
+        background: #f39dbd;
+      }
+
+      &:nth-child(2) {
+        border-bottom: 1px solid #bbc2d0;
+      }
+
+      &:nth-child(2) .product__order-icon {
+        background: #a2aedb;
+      }
+
+      &:nth-child(3) {
+        border-bottom: 1px solid #bbc2d0;
+      }
+
+      &:nth-child(3) .product__order-icon {
+        background: #ffbd95;
+      }
+
+      &:nth-child(4) .product__order-icon {
+        background: #aad9ac;
+      }
+
+      &-left {
+        display: flex;
+        align-items: start;
+      }
+    }
+
+    &-text {
+      margin: 0;
+
+      &:nth-child(1) {
+        margin-bottom: 10px;
+        font-family: "Gilroy";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 19px;
+        letter-spacing: -0.3px;
+        color: #262728;
+      }
+
+      &:nth-child(2) {
+        font-family: "Gilroy";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 19px;
+        color: #bbc2d0;
+      }
+    }
+
+    &-icon {
+      margin-right: 16px;
+      margin-bottom: 6px;
+      padding: 6px 10px 0 10px;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    &-button {
+      width: 100%;
+      padding: 16px;
+      border: none;
+      background: #00c48c;
+      border-radius: 26px;
+      font-family: "Gilroy";
+      font-style: normal;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 19px;
+      text-align: center;
+      letter-spacing: 0.01em;
+      color: #ffffff;
+      text-align: center;
+      cursor: pointer;
+    }
+  }
+
+  &__icons {
+    &-list {
+      top: 0;
+      list-style-type: none;
+      position: absolute;
+      left: -20px;
+    }
+
+    &-item {
+      margin-bottom: 6px;
+      padding: 6px 10px 0 10px;
+      border-radius: 6px;
+      cursor: pointer;
+
+      &:nth-child(1) {
+        background: #f39dbd;
+      }
+      &:nth-child(2) {
+        background: #a2aedb;
+      }
+      &:nth-child(3) {
+        background: #ffbd95;
+      }
+      &:nth-child(4) {
+        background: #aad9ac;
+      }
     }
   }
 }
